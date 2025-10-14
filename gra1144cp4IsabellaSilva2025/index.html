@@ -6,17 +6,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Fleur+De+Leah&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 <style type="text/css">
 body {
     margin: 0;
-	
+	background-image: url("phantom background.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	color: white;
+	}
+header {
+  text-align: center;
+  padding: 50px 20px;
+margin-bottom: 5px;
 }
-	h1 {
+h1 {
+	font-family: "Alfa Slab One";
+	font-size: 70px;
+	}
+h2 {
 	font-family: "Fleur De Leah";
-	font-size: 70px
+	font-size: 100px;
 	}
 .fleur-de-leah-regular {
   font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.alfa-slab-one-regular {
+  font-family: "Alfa Slab One", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -27,6 +48,71 @@ wrapper {
 }
 section {
     height: 1025px;
+}
+#media {
+  padding: 40px;
+  background-color: transparent;
+  color: white;
+}
+
+.media-content {
+  display: flex;
+  align-items: center;     /* vertically aligns text and image */
+  justify-content: space-between; /* evenly spaces them out */
+  gap: 40px;               /* space between text and image */
+}
+
+.media-text {
+  flex: 1;                 /* text takes up half the space */
+  text-align: left;
+}
+
+.media-image {
+  flex: 1;                 /* image takes up the other half */
+  max-width: 100%;         /* responsive scaling */
+  height: auto;
+  border-radius: 10px;     /* optional, makes edges smooth */
+}
+#location {
+  padding: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.location-content {
+  display: flex;
+  align-items: center;       /* vertically align text + map */
+  justify-content: space-between;
+  gap: 40px;                 /* space between text and map */
+  flex-wrap: wrap;           /* allows stacking on small screens */
+}
+
+.location-text {
+  flex: 1;                   /* take up half the width */
+  text-align: left;
+}
+
+.location-text h3 {
+  margin-bottom: 10px;
+}
+
+.location-text p {
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.map-container {
+  flex: 1;                   /* other half for map */
+  display: flex;
+  justify-content: center;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 nav {
     background-color: black;
@@ -50,40 +136,65 @@ li:hover {
 
 <body>
 <wrapper>
-  <header><img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/nnjwabh93zf7uwbc1u8k" width= "100px" height= "100px" alt="theater icon"/>
-    <h1>This is the content for layout H1 Tag </h1>
+  <header><img src="theater logo.png" width= "100px" height= "100px" alt="theater icon"/>
+    <h1>Fox Theatre</h1>
+	<h3> From Broadway sensations to chart-topping concerts, classic films, and unmissable live events, the Fox Theatre is where magic comes to life!</h3>
   </header>
   <section id="home">
     <nav>
       <ul>
         <a href="#home"><li>Home</li></a>
-		<a href="#media"><li>Media</li></a>
+		<a href="#media"><li>Now Showing</li></a>
 		<a href="#location"><li>Location</li></a>
+		<a href="#Upcoming"><li>Upcoming Shows</li></a>
+		<a href="#About"><li>About Us</li></a>
       </ul>
     </nav>
-    <h2>Home</h2>
 <img src="https://visit-detroit-proxy.imgix.net/https%3A%2F%2Ffiles.idss.com%2FC412%2Fbdf8b422-a284-4575-a3d2-216df0954619.jpg?auto=compress%2Cformat&fit=max&h=1080&q=80&w=1920&s=70d0b2d74f1af4125b4f78cde4935ad2" width="1370" height="900" alt= "theater">
   </section>
   <section id="media">
     <nav>
       <ul>
         <a href="#home"><li>Home</li></a>
-		<a href="#media"><li>Media</li></a>
+		<a href="#media"><li>Now Showing</li></a>
 		<a href="#location"><li>Location</li></a>
+		<a href="#Upcoming"><li>Upcoming Shows</li></a>
+		<a href="#About"><li>About Us</li></a>
       </ul>
-    </nav>
-    <h2>Media</h2>
-<img src="https://media.cnn.com/api/v1/images/stellar/prod/230414122559-06-phantom-of-the-opera-closing-phans.jpg?c=original" width="1370" height="900" alt= "phantom">
+	  </nav>
+	  <h2> Phantom of the Opera</h2>  
+	  <div class="media-content">
+    <div class="media-text">
+<p>Cameron Mackintosh’s legendary production of Andrew Lloyd Webber’s The Phantom of the Opera is back to thrill American audiences once again! A revitalized production featuring Maria Björnson’s brilliant original design, which was rapturously received by London critics when it reopened at His Majesty’s Theatre in 2021, will launch in a multi-year North American Tour from November 2025, premiering at the Hippodrome Theatre in Baltimore, MD and appearing in select theaters near you!</p>
+<p>It tells the tale of a disfigured musical genius known only as ‘The Phantom’ who haunts the depths of the Paris Opera House. Mesmerized by the talents and beauty of a young soprano – Christine, The Phantom lures her as his protégé and falls fiercely in love with her. Unaware of Christine’s love for Raoul, The Phantom’s obsession sets the scene for a dramatic turn of events where jealousy, madness and passions collide. </p>
+<p> The Phantom of the Opera is widely considered one of the most beautiful and spectacular productions in history. First directed by Harold Prince with musical staging and choreography by Gillian Lynne, the brilliant original production has played to over 160 million people in 58 territories and 205 cities in 21 languages. Andrew Lloyd Webber’s romantic, haunting and soaring score includes “The Music of the Night,” “All I Ask of You,” “Wishing You Were Somehow Here Again,” “Masquerade” and the iconic title song. </p>
+		</div>
+<img src="https://media.cnn.com/api/v1/images/stellar/prod/230414122559-06-phantom-of-the-opera-closing-phans.jpg?c=original" width="900" height="700" alt= "phantom">
+		  </div>
   </section>
   <section id="location">
     <nav>
       <ul>
        <a href="#home"><li>Home</li></a>
-		<a href="#media"><li>Media</li></a>
+		<a href="#media"><li>Now Showing</li></a>
 		<a href="#location"><li>Location</li></a>
+		<a href="#Upcoming"><li>Upcoming Shows</li></a>
+		<a href="#About"><li>About Us</li></a>
       </ul>
     </nav>
     <h2>Location</h2>
+	<div class="location-content">
+    <div class="location-text">
+  <h3>Fox Theatre, Atlanta, Georgia</h3>
+  <p>
+    660 Peachtree St NE<br>
+        Atlanta, GA 30308<br><br>
+        Located in the heart of Midtown Atlanta, the Fox Theatre is one of the city's most treasured landmarks and a premier venue for Broadway shows, concerts, and special events.
+		</p>
+		</div>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6633.07514480148!2d-84.3853395!3d33.7726136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5046f76d0c0db%3A0x1a9d789f6178c69e!2sFox%20Theatre!5e0!3m2!1sen!2sus!4v1760474306311!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div></div>
   </section>
   <footer> &copy; 2025, Isabella Silva.
 This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</footer>
