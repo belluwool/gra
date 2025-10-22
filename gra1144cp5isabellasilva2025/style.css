@@ -1,0 +1,43 @@
+@charset "UTF-8";
+body {
+    background-image: url("FINAL PTV.jpg");
+	width: 1300px;
+	height: 1000px;
+}
+wrapper {
+    width: 1366px;
+	height: 700px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    background-color;
+}
+main {
+    height: 750px;
+}
+nav {
+    background-color: black;
+}
+nav a li {
+    padding: 10px 20px;
+    display: inline-block;
+    color: white;
+}
+nav a li:hover {
+    background-color: #A69A2C;
+}
+
+h1 {
+    color: #A69A2C;
+	font-family: Boldonse;
+	font-size: 25px;
+}
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+footer {
+	color: #A69A2C;
+}
+
