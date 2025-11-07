@@ -1,0 +1,158 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #111;
+  padding: 10px 40px;
+  position: relative;
+}
+
+.logo img {
+  height: 50px;
+}
+.navbar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff6363;
+}
+.goldman-regular {
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.goldman-bold {
+  font-family: "Goldman", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+h1{
+	font-family: "Goldman";
+}
+.product-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px;
+  gap: 60px;
+}
+
+/* LEFT: IMAGE */
+.product-image img {
+  width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* RIGHT: DETAILS */
+.product-details {
+  max-width: 400px;
+}
+
+.product-details h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.5em;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.option-group {
+  margin-bottom: 20px;
+}
+
+.color-buttons button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.color-buttons button:hover {
+  border-color: #000;
+}
+
+.size-buttons button {
+  background: white;
+  border: 2px solid #999;
+  padding: 8px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.size-buttons button.selected {
+  background-color: #111;
+  color: white;
+  border-color: #111;
+}
+
+.add-to-cart {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #333;
+}
+.image-container {
+  position: relative;
+  width: 400px; /* same width as your product image */
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.4s ease;
+    height: auto;
+    position: absolute;
+}
+
+.image-container .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.image-container:hover .hover-img {
+  opacity: 1;
+}
+
+.image-container:hover .main-img {
+  opacity: 0;
+}
