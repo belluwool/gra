@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+	<style>
+		body{
+			margin:0;
+			padding:0;
+			background-color:#CCC;
+	}
+wrapper{
+	width:100%;
+	max-width:1024px;
+	margin:0 auto;
+	display:block;
+	}
+header{
+	height:150px;
+	background-color:#19B5E3;
+	}
+main{
+	height:768px;
+	background-color:#FFF;
+	padding:4em 0;
+	box-sizing:border-box;
+	text-align:center;
+	}
+		footer {
+			height:80px;
+			background-color:#19B5E3;
+			clear:both;
+		}
+		#level{
+			animation: charging 2s;
+		}
+		@keyframes charging{
+			0%{
+				transform:scaleX(0)
+			}
+			100%{
+				fill:green;
+				transform:scaleX(1)
+			}
+		}
+		#battery{
+			animation: spinning (2s)
+		}
+		@keyframes spinning{
+			0%{
+				transform:rotate(0deg)
+			}
+			100%{
+				transform:rotate(360deg)
+			}
+		}
+		#capsule {
+			animation: moving
+		}
+	</style>
+</head>
+
+<body>
+	<wrapper>
+	<header>
+		<main>
+			<?xml version="1.0" encoding="UTF-8"?>
+			<svg id="battery" xmlns="http://www.w3.org/2000/svg" width="219.5" height="66" viewbox="0 0 219.5 66">
+			<rect id="level" x="4.58" y="5" width="198.88" height="56" fill="#7ac25b"/>
+				<path id="outline" d="M219.5, 14.12h-11.46V0H0v66h208.04v-14.25h11.46V14.25ZM198.88,56H9.16V10h189.71v46Z" fill="231f20"/>
+			</svg>
+		</main>
+		</header>
+	</wrapper>
+</body>
+</html>
