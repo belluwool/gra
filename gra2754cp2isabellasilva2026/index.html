@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>domo animation</title>
+	<style> 
+	body {
+    margin: 0;
+}
+
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-bottom: 50px;
+    position: relative;
+    height: 500px;
+	overflow: visible;
+}
+.sky::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+
+    animation: darkenSky 8s forwards;
+}
+
+@keyframes darkenSky {
+    to {
+        opacity: 0.5;
+    }
+}	.cloud {
+    position: absolute; z-index:2;
+    top: 50px;
+    width: 500px;
+}
+
+.cloud1 {
+    animation: moveClouds 10s linear infinite;
+}
+
+.cloud2 {
+    top: 120px;
+    animation: moveClouds 15s linear infinite;
+}
+
+@keyframes moveClouds {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -300px;
+    }
+}
+		.domo-container {
+    position: relative;
+    z-index:3;
+}
+
+.domo {
+    width: 900px;
+}
+		@keyframes nervousShift {
+  0%,100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+.domo {
+  animation: nervousShift 1s infinite;
+}
+		.sky {
+    position: absolute; z-index:1;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("sky.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+		.overlay {
+    position: fixed;
+    top: 0%;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+
+    z-index: 10; 
+    pointer-events: none;
+}
+
+.overlay img {
+    width: 60%;
+    height: 60%;
+}
+		.overlay {
+   animation: slightFloat 4s ease-in-out infinite;
+}
+
+@keyframes slightFloat {
+   50% { transform: translateY(2px); }
+}
+	</style>
+</head>
+
+<body>
+	<wrapper> 
+		<header>
+		</header>
+		<main> 
+	<div class="scene">
+
+    <div class="sky"></div>
+
+    <div class="clouds">
+        <img src="dark-cloud1.png" class="cloud cloud1" alt="">
+        <img src="dark-cloud2.png" class="cloud cloud2" alt="">
+    </div>
+
+    <div class="domo-container">
+        <img src="domo.png" class="domo" alt="">
+    </div>
+ 
+</div>
+	<div class="overlay">
+        <img src="record.png" alt="">
+    </div>		
+		</main>
+	</wrapper>
+</body>
+<footer>
+	<p> © 2026, Isabella Silva
+This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+	</footer>
+</html>
