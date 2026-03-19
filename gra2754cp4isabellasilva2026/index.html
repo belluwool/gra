@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Travel Destinations</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+	body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 15px;
+}
+.card {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+		.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+		 width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}.card:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 10px 20px;
+  color: white;
+}
+.nav-links {
+  list-style: none;
+  display: none; 
+  flex-direction: column;
+  width: 100%;
+  background: #444;
+}
+
+.nav-links li {
+  text-align: center;
+  padding: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  font-size: 25px;
+  cursor: pointer;
+}
+.nav-links.active {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links li {
+    padding: 0 15px;
+  }
+	.nav-links {
+  transition: all 0.3s ease;
+}
+	.nav-links a:hover {
+  color: #ffd700;
+}
+		.topnav .fa-times {
+    display: block;
+}
+.topnav .fa-bars {
+    display: none;
+}
+.topnav.responsive .fa-times {
+    display: none;
+}
+.topnav.responsive .fa-bars {
+    display: block;
+}
+	</style>
+</head>
+
+<body>
+	<header>
+    <h1>My Dream Travel Destinations</h1>
+  </header>
+	
+<nav class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+  <ul class="nav-links" id="menu">
+    <li><a href="#">Paris</a></li>
+    <li><a href="#">Tokyo</a></li>
+    <li><a href="#">New York</a></li>
+    <li><a href="#">Madrid</a></li>
+    <li><a href="#">London</a></li>
+  </ul>
+</nav>
+  <main class="container">
+    
+    <div class="card">
+      <img src="Paris.jpg" alt="Paris">
+      <h2>Paris, France</h2>
+      <p>The city of lights and romance.</p>
+    </div>
+
+    <div class="card">
+      <img src="tokyo.jpg" alt="Japan">
+      <h2>Tokyo, Japan</h2>
+      <p>A mix of tradition and modern life.</p>
+    </div>
+
+    <div class="card">
+      <img src="newyork.jpg" alt="New York">
+      <h2>New York, USA</h2>
+      <p>The city that never sleeps.</p>
+    </div>
+
+    <div class="card">
+      <img src="madrid.jpg" alt="Italy">
+      <h2>Madrid, Spain</h2>
+      <p>Famous for food, art, and history.</p>
+    </div>
+
+    <div class="card">
+      <img src="london.jpg" alt="Hawaii">
+      <h2>London, England</h2>
+      <p>Blend of rich history, royal heritage, and vibrant culture.</p>
+    </div> 
+	   </main>
+
+  <footer>
+    <p>© 2026, Isabella Silva
+This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  </footer>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+</script>
+</body>
+</html>
